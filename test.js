@@ -1,4 +1,4 @@
-var data = {
+const data = {
   a: 1,
   b: null,
   c: undefined,
@@ -26,21 +26,27 @@ var data = {
         s: {
           t: 1,
           "spaced keys": "hey"
-        }
+        },
+        u: [
+          [0, 0, 1],
+          [0, 2, 0],
+          [1, 0, 0],
+        ]
       }
     }
   }
 }
-
-var results = { total: 0, passed: 0 };
-function test(condition, data) {
+const write = w => document.body.innerHTML += `${w}<br/>`
+const results = { total: 0, passed: 0 };
+const test = (condition, data) => {
   results.total++;
 
   if (condition) {
     results.passed++;
+    write(`  ✅ pass: ${data}`)
     return;
   }
-
+  write(`  🔴 fail: ${data}`)
   console.assert(condition, data);
 }
 
@@ -62,6 +68,7 @@ test(mb('l', 'm', 2, 'n')(data) === 3, 'n');
 test(mb('l', 'o', 'p', 'q')(data) === true, 'q');
 test(mb('l', 'o', 'p', 'r')(data) === false, 'r');
 test(mb('l', 'o', 'p', 's', 't')(data) === 1, 't');
+test(mb('l', 'o', 'p', 'u', 1, 1)(data) === 2, 'u');
 test(mb('l', 'o', 'p', 's', 'spaced keys')(data) === 'hey', 'spaced keys');
 
 console.info(`Passed tests ${results.passed} out of ${results.total}.`);
