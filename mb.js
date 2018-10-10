@@ -1,1 +1,1 @@
-var mb=(f,...p)=>(o,i=o[f])=>i&&p[0]!=null?mb(...p)(i):i
+var mb=(...p)=>[].reduce.bind(p,(a,c)=>Object(a)[c])
