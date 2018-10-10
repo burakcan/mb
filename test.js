@@ -1,5 +1,3 @@
-var mb=require('./mb')
-
 var data = {
   a: 1,
   b: null,
