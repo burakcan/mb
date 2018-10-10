@@ -1,4 +1,4 @@
-var mb=(f,...p)=>(o=f,i=o[f],n=null)=>i&&p[0]!=n?mb(...p)(i):i;
+var mb=require('./mb')
 
 var data = {
   a: 1,
