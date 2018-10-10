@@ -9,10 +9,14 @@ An alternative to [facebookincubator/idx](https://github.com/facebookincubator/i
 <hr />
 
 ## Install
-Just copy/paste the contents of 'mb.js' into your project.
+Just copy/paste this function into your project:
+``` javascript
+var mb=(f,...p)=>(o=f,i=o[f],n=null)=>i==n?n:p[0]!=n?mb(...p)(i):i;
+```
+Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
 
 ## Use
-```
+``` javascript
 var getHello = mb('a', 'b', 0, 'hello');
 
 var obj1 = {
