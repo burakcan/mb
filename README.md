@@ -3,7 +3,7 @@
 <img height="80" width="80" alt="goat" src="https://d1j8pt39hxlh3d.cloudfront.net/development/emojione/4.0/833/14168.svg?1533081835" />
 
 Exception-free nested nullable attribute accessor.
-An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 57 bytes.
+An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 53 bytes.
 </div/>
 
 <hr />
@@ -11,7 +11,7 @@ An alternative to [facebookincubator/idx](https://github.com/facebookincubator/i
 ## Install
 Just copy/paste this function into your project:
 ``` javascript
-var mb=(f,...p)=>(o,i=o[f])=>i&&p[0]!=null?mb(...p)(i):i
+var mb=(...p)=>[].reduce.bind(p,(a,c)=>Object(a)[c])
 ```
 Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
 
@@ -44,3 +44,4 @@ getHello(obj2); // undefined
 - [Fatih Kadir Akin](https://github.com/f)
 - [Burak Can](https://github.com/burakcan)
 - [Eser Ozvataf](https://github.com/eserozvataf)
+- [Cahit Gürgüc](https://github.com/aborjinik)
