@@ -49,3 +49,4 @@ getHelloLength(obj2); // undefined
 - [Burak Can](https://github.com/burakcan)
 - [Eser Ozvataf](https://github.com/eserozvataf)
 - [Cahit Gürgüc](https://github.com/aborjinik)
+- [Alper Tekinalp](https://github.com/alpert)
