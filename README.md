@@ -33,7 +33,7 @@ var obj2 = {
 };
 
 getHello(obj1); // world
-getHelloLength(obj2); // 5
+getHelloLength(obj1); // 5
 
 getHello(obj2); // undefined
 getHelloLength(obj2); // undefined
