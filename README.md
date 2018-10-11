@@ -18,6 +18,7 @@ Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakc
 ## Use
 ``` javascript
 var getHello = mb('a', 'b', 0, 'hello');
+var getHelloLength = mb('a', 'b', 0, 'hello', 'length');
 
 var obj1 = {
   a: {
@@ -32,7 +33,10 @@ var obj2 = {
 };
 
 getHello(obj1); // world
+getHelloLength(obj2); // 5
+
 getHello(obj2); // undefined
+getHelloLength(obj2); // undefined
 ```
 
 ## Contribution and Code-Golfing
