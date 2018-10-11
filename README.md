@@ -33,7 +33,7 @@ var obj2 = {
 };
 
 getHello(obj1); // world
-getHelloLength(obj2); // 5
+getHelloLength(obj1); // 5
 
 getHello(obj2); // undefined
 getHelloLength(obj2); // undefined
@@ -49,3 +49,4 @@ getHelloLength(obj2); // undefined
 - [Burak Can](https://github.com/burakcan)
 - [Eser Ozvataf](https://github.com/eserozvataf)
 - [Cahit Gürgüc](https://github.com/aborjinik)
+- [Alper Tekinalp](https://github.com/alpert)
