@@ -52,6 +52,7 @@ const test = (condition, data) => {
 
 console.group('mb tests');
 test(mb('a')(data) === 1, 'a');
+test(mb('a', 'bad key', 'bad key', 'bad key')(data) === undefined, 'bad key');
 test(mb('b')(data) === null, 'b');
 test(mb('c')(data) === undefined, 'c');
 test(mb('d')(data)._ === 'object', 'd');
