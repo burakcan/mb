@@ -1,1 +1,1 @@
-var mb=(...p)=>p.reduce.bind(p,(a,c)=>Object(a)[c])
+var mb=(...p)=>o=>p.reduce((a,c)=>Object(a)[c],o)

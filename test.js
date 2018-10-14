@@ -61,6 +61,7 @@ test(typeof mb('d', 'g')(data) === 'function', 'g');
 test(mb('d', 'h')(data) === 3, 'h');
 test(mb('d', 'j')(data) === 1, 'j');
 test(mb('d', 'k')(data) === 'string', 'k');
+test(mb('d', 'k', 'length')(data) === 6, 'length');
 test(mb('l', 'm')(data).length === 3, 'm');
 test(mb('l', 'm', 0, 'n')(data) === 1, 'n');
 test(mb('l', 'm', 1, 'n')(data) === 2, 'n');
