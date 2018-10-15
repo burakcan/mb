@@ -11,7 +11,7 @@ An alternative to [facebookincubator/idx](https://github.com/facebookincubator/i
 ## Install
 Just copy/paste this function into your project:
 ``` javascript
-var mb=(...p)=>o=>p.reduce((a = {},c)=>a[c],o)
+var mb=(...p)=>o=>p.reduce((a={},c)=>a[c],o)
 ```
 Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
 
