@@ -1,1 +1,1 @@
-var mb=(...p)=>o=>p.reduce((a = {},c)=>a[c],o)
+var mb=(...p)=>o=>p.reduce((a={},c)=>a[c],o)
