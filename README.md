@@ -3,7 +3,7 @@
 <img height="80" width="80" alt="goat" src="https://d1j8pt39hxlh3d.cloudfront.net/development/emojione/4.0/833/14168.svg?1533081835" />
 
 Exception-free nested nullable attribute accessor.
-An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 40 bytes.
+An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 55 bytes.
 
 </div/>
 
@@ -13,7 +13,7 @@ An alternative to [facebookincubator/idx](https://github.com/facebookincubator/i
 
 Just copy/paste this function into your project:
 ``` javascript
-var mb=(...p)=>o=>p.map(c=>o=o&&o[c])&&o
+var mb=(...p) => o => p.map(c => (o = o && o[c])) && o
 ```
 
 Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
@@ -46,7 +46,8 @@ getHelloLength(obj2); // undefined
 ## Contribution and Code-Golfing
 
 1. Clone and shorten current code.
-2. Please open `test.html` in your browser and open console to see if all the tests pass.
+2. Follow Standard rules (https://standardjs.com/)
+3. Please open `test.html` in your browser and open console to see if all the tests pass.
 
 ## Contributors
 
@@ -58,3 +59,4 @@ getHelloLength(obj2); // undefined
 - [Max Gerber](https://github.com/maxwellgerber)
 - [Cem Ekici](https://github.com/cekici)
 - [Atanas Minev](https://github.com/atmin)
+- [Javi Santos](https://github.com/javisantos)
