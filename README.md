@@ -14,7 +14,7 @@ An alternative to [facebookincubator/idx](https://github.com/facebookincubator/i
 Just copy/paste this function into your project:
 
 ```javascript
-var mb=(...p)=>o=>p.map(c=>(o?(o=o[c]):0))&&o;
+var mb=(...p)=>o=>p.map(c=>(o?(o=o[c]):0))&&o
 ```
 
 Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
