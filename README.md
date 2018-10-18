@@ -3,7 +3,7 @@
 <img height="80" width="80" alt="goat" src="https://d1j8pt39hxlh3d.cloudfront.net/development/emojione/4.0/833/14168.svg?1533081835" />
 
 Exception-free nested nullable attribute accessor.
-An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 42 bytes.
+An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 40 bytes.
 </div/>
 
 <hr />
@@ -11,7 +11,7 @@ An alternative to [facebookincubator/idx](https://github.com/facebookincubator/i
 ## Install
 Just copy/paste this function into your project:
 ``` javascript
-var mb=(...p)=>o=>p.map(c=>o?o=o[c]:!1)&&o
+var mb=(...p)=>o=>p.map(c=>o=o&&o[c])&&o
 ```
 Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
 
