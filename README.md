@@ -3,32 +3,37 @@
 <img height="80" width="80" alt="goat" src="https://d1j8pt39hxlh3d.cloudfront.net/development/emojione/4.0/833/14168.svg?1533081835" />
 
 Exception-free nested nullable attribute accessor.
-An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 42 bytes.
+An alternative to [facebookincubator/idx](https://github.com/facebookincubator/idx) in 41 bytes.
+
 </div/>
 
 <hr />
 
 ## Install
+
 Just copy/paste this function into your project:
-``` javascript
-var mb=(...p)=>o=>p.map(c=>o?o=o[c]:!1)&&o
+
+```javascript
+var mb = (...p) => o => p.map(c => (o ? (o = o[c]) : 0)) && o;
 ```
+
 Alternatively, you can download [mb.js](https://raw.githubusercontent.com/burakcan/mb/master/mb.js).
 
 ## Use
-``` javascript
-var getHello = mb('a', 'b', 0, 'hello');
-var getHelloLength = mb('a', 'b', 0, 'hello', 'length');
+
+```javascript
+var getHello = mb("a", "b", 0, "hello");
+var getHelloLength = mb("a", "b", 0, "hello", "length");
 
 var obj1 = {
   a: {
-    b: [{ hello: 'world' }]
+    b: [{ hello: "world" }]
   }
 };
 
 var obj2 = {
   c: {
-    d: 'e'
+    d: "e"
   }
 };
 
@@ -45,6 +50,7 @@ getHelloLength(obj2); // undefined
 2. Please open `test.html` in your browser and open console to see if all the tests pass.
 
 ## Contributors
+
 - [Fatih Kadir Akin](https://github.com/f)
 - [Burak Can](https://github.com/burakcan)
 - [Eser Ozvataf](https://github.com/eserozvataf)
@@ -52,3 +58,4 @@ getHelloLength(obj2); // undefined
 - [Alper Tekinalp](https://github.com/alpert)
 - [Max Gerber](https://github.com/maxwellgerber)
 - [Cem Ekici](https://github.com/cekici)
+- [Atanas Minev](https://github.com/atmin)
