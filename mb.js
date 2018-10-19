@@ -1,1 +1,1 @@
-var mb=(...p)=>o=>p.map(c=>o=o&&o[c])&&o
+mb=p=>o=>p.map(c=>o=(o||{})[c])&&o
