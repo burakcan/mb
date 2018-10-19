@@ -51,27 +51,30 @@ const test = (condition, data) => {
 }
 
 console.group('mb tests');
-test(mb('a')(data) === 1, 'a');
-test(mb('a', 'bad key', 'bad key', 'bad key')(data) === undefined, 'bad key');
-test(mb('b')(data) === null, 'b');
-test(mb('c')(data) === undefined, 'c');
-test(mb('d')(data)._ === 'object', 'd');
-test(JSON.stringify(mb('d', 'e')(data)) === '{}', 'e');
-test(mb('d', 'f')(data) === null, 'f');
-test(typeof mb('d', 'g')(data) === 'function', 'g');
-test(mb('d', 'h')(data) === 3, 'h');
-test(mb('d', 'j')(data) === 1, 'j');
-test(mb('d', 'k')(data) === 'string', 'k');
-test(mb('d', 'k', 'length')(data) === 6, 'length');
-test(mb('l', 'm')(data).length === 3, 'm');
-test(mb('l', 'm', 0, 'n')(data) === 1, 'n');
-test(mb('l', 'm', 1, 'n')(data) === 2, 'n');
-test(mb('l', 'm', 2, 'n')(data) === 3, 'n');
-test(mb('l', 'o', 'p', 'q')(data) === true, 'q');
-test(mb('l', 'o', 'p', 'r')(data) === false, 'r');
-test(mb('l', 'o', 'p', 's', 't')(data) === 1, 't');
-test(mb('l', 'o', 'p', 'u', 1, 1)(data) === 2, 'u');
-test(mb('l', 'o', 'p', 's', 'spaced keys')(data) === 'hey', 'spaced keys');
+test(mb(['a'])(data) === 1, 'a');
+test(mb(['a', 'bad key', 'bad key', 'bad key'])(data) === undefined, 'bad key');
+test(mb(['b'])(data) === null, 'b');
+test(mb(['c'])(data) === undefined, 'c');
+test(mb(['d'])(data)._ === 'object', 'd');
+test(JSON.stringify(mb(['d', 'e'])(data)) === '{}', 'e');
+test(mb(['d', 'f'])(data) === null, 'f');
+test(typeof mb(['d', 'g'])(data) === 'function', 'g');
+test(mb(['d', 'h'])(data) === 3, 'h');
+test(mb(['d', 'j'])(data) === 1, 'j');
+test(mb(['d', 'k'])(data) === 'string', 'k');
+test(mb(['d', 'k', 'length'])(data) === 6, 'length');
+test(mb(['l', 'm'])(data).length === 3, 'm');
+test(mb(['l', 'm', 0, 'n'])(data) === 1, 'n');
+test(mb(['l', 'm', 1, 'n'])(data) === 2, 'n');
+test(mb(['l', 'm', 2, 'n'])(data) === 3, 'n');
+test(mb(['l', 'o', 'p', 'q'])(data) === true, 'q');
+test(mb(['l', 'o', 'p', 'r'])(data) === false, 'r');
+test(mb(['l', 'o', 'p', 's', 't'])(data) === 1, 't');
+test(mb(['l', 'o', 'p', 'u', 1, 1])(data) === 2, 'u');
+test(mb(['l', 'o', 'p', 's', 'spaced keys'])(data) === 'hey', 'spaced keys');
+
+test(mb([0, 1])([[1,2]]) === 2, 'array');
+test(mb([0, 1])([0]) === undefined, 'missing intermediate');
 
 console.info(`Passed tests ${results.passed} out of ${results.total}.`);
 
